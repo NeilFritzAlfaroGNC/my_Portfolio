@@ -185,23 +185,23 @@
                 <div class="text">
                     Got a project in mind, a role to fill, or just want to say hi? I'm always open to collaborations, freelance work, and new opportunities — drop a message below and I'll get back to you as soon as I can.
                 </div>
-                <form action="https://formsubmit.co/neilfritzalfaro.gnc@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New message from your portfolio">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="true">
-                    <input type="text" name="_honey" style="display:none">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="f885efb2-05c2-499e-98b6-cd5a265fc58f">
+                    <input type="hidden" name="subject" value="New message from your portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <input type="checkbox" name="botcheck" style="display:none">
 
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
 
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="Subject" placeholder="What is the message about?" required>
+                    <input type="text" id="subject" name="user_subject" placeholder="What is the message about?" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="Message" cols="30" rows="10" placeholder="Write your message here" required></textarea>
+                    <textarea id="message" name="message" cols="30" rows="10" placeholder="Write your message here" required></textarea>
 
                     <button type="submit">Send Message</button>
                 </form>
