@@ -183,17 +183,25 @@
 
             <div class="group">
                 <div class="text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus enim illo dolor, nisi beatae eum cum dolorum atque aut odit exercitationem voluptatibus. Quasi ipsum impedit nobis saepe repellendus iure eius aliquid maiores eos et, voluptate ipsa mollitia. A distinctio modi reprehenderit neque ipsa. Ipsum quos est sit laborum vitae cupiditate!
+                    Got a project in mind, a role to fill, or just want to say hi? I'm always open to collaborations, freelance work, and new opportunities — drop a message below and I'll get back to you as soon as I can.
                 </div>
-                <form>
+                <form action="https://formsubmit.co/neilfritzalfaro.gnc@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New message from your portfolio">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="text" name="_honey" style="display:none">
+
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="Subject" placeholder="What is the message about?" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" cols="30" rows="10"></textarea>
+                    <textarea id="message" name="Message" cols="30" rows="10" placeholder="Write your message here" required></textarea>
 
                     <button type="submit">Send Message</button>
                 </form>
