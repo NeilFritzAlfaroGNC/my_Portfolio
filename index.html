@@ -149,21 +149,25 @@
             <div class="cells">
 
                 <div class="cert-card" onclick="openModal('modal1')">
-                    <i class="fa-solid fa-certificate"></i>
-                    <h3>ITS - Networking</h3>
-                    <p>Issued by: Certiport</p>
-                    <p>Date: January 27, 2026</p>
-                    <p class="score">Score: 900 / 1000</p>
-                    <span class="view-btn">View Certificate</span>
+                    <img src="images/its-networking.jpg" alt="ITS Networking Certificate preview" class="cert-preview">
+                    <div class="cert-info">
+                        <h3>ITS - Networking</h3>
+                        <p>Issued by: Certiport</p>
+                        <p>Date: January 27, 2026</p>
+                        <p class="score">Score: 900 / 1000</p>
+                        <span class="view-btn">View Certificate</span>
+                    </div>
                 </div>
 
                 <div class="cert-card" onclick="openModal('modal2')">
-                    <i class="fa-solid fa-certificate"></i>
-                    <h3>Adobe Certified Professional</h3>
-                    <p>Visual Design using Adobe Photoshop 2024</p>
-                    <p>Date: May 23, 2025</p>
-                    <p class="score">Score: 766 / 1000</p>
-                    <span class="view-btn">View Certificate</span>
+                    <img src="images/adobe-certified.jpg" alt="Adobe Certified Professional Certificate preview" class="cert-preview">
+                    <div class="cert-info">
+                        <h3>Adobe Certified Professional</h3>
+                        <p>Visual Design using Adobe Photoshop 2024</p>
+                        <p>Date: May 23, 2025</p>
+                        <p class="score">Score: 766 / 1000</p>
+                        <span class="view-btn">View Certificate</span>
+                    </div>
                 </div>
 
             </div>
@@ -173,7 +177,7 @@
         <div id="modal1" class="modal" onclick="closeModal('modal1')">
             <div class="modal-content" onclick="event.stopPropagation()">
                 <button class="close-btn" onclick="closeModal('modal1')">&times;</button>
-                <iframe src="images/ITS-Networking.pdf" width="100%" height="100%"></iframe>
+                <img src="images/its-networking.jpg" alt="ITS Networking Certificate" class="cert-image" onclick="toggleZoom(this)">
             </div>
         </div>
 
@@ -181,7 +185,7 @@
         <div id="modal2" class="modal" onclick="closeModal('modal2')">
             <div class="modal-content" onclick="event.stopPropagation()">
                 <button class="close-btn" onclick="closeModal('modal2')">&times;</button>
-                <iframe src="images/Adobe-Certified2025.pdf"width="100%" height="100%"></iframe>
+                <img src="images/adobe-certified.jpg" alt="Adobe Certified Professional Certificate" class="cert-image" onclick="toggleZoom(this)">
             </div>
         </div>
 
@@ -226,6 +230,11 @@
         function closeModal(id) {
             document.getElementById(id).style.display = 'none';
             document.body.style.overflow = 'auto';
+            document.querySelectorAll('.cert-image.zoomed').forEach(img => img.classList.remove('zoomed'));
+        }
+
+        function toggleZoom(img) {
+            img.classList.toggle('zoomed');
         }
     </script>
 </body>
